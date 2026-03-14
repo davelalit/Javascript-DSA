@@ -1,0 +1,58 @@
+HTTP status codes are three-digit numbers returned by a server in response to a client's request. They indicate the outcome of the request and are categorized into five classes:
+1xx Informational Responses: The server has received the request and is continuing the process. 
+100 Continue: The server has received the request headers and the client should proceed with sending the request body.
+Code
+
+    HTTP/1.1 100 Continue
+2xx Success Responses: The request was successfully received, understood, and accepted. 
+200 OK: The request has succeeded. This is the most common successful status code.
+Code
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+    {"message": "Data retrieved successfully."}
+201 Created: The request has been fulfilled and resulted in a new resource being created.
+Code
+
+    HTTP/1.1 201 Created
+    Location: /users/123
+204 No Content: The server successfully processed the request, but is not returning any content.
+Code
+
+    HTTP/1.1 204 No Content
+3xx Redirection Messages: The client needs to take further action to complete the request. 
+301 Moved Permanently: The requested resource has been permanently moved to a new URI.
+Code
+
+    HTTP/1.1 301 Moved Permanently
+    Location: https://example.com/new-page
+302 Found: The requested resource has been temporarily moved to a different URI. 
+Code
+
+    HTTP/1.1 302 Found
+    Location: /temporary-location
+304 Not Modified: The resource has not been modified since the last request, allowing the client to use cached content.
+Code
+
+    HTTP/1.1 304 Not Modified
+4xx Client Error Responses: The client seems to have made an error.
+400 Bad Request: The server cannot process the request due to a client error, such as malformed syntax.
+Code
+
+    HTTP/1.1 400 Bad Request
+    Content-Type: application/json
+    {"error": "Invalid input data."}
+401 Unauthorized: The client needs to authenticate to get the requested response.
+Code
+
+    HTTP/1.1 401 Unauthorized
+    WWW-Authenticate: Basic realm="Access to staging site"
+403 Forbidden: The client does not have access rights to the content.
+Code
+
+    HTTP/1.1 403 Forbidden
+404 Not Found: The server cannot find the requested resource.
+Code
+
+    HTTP/1.1 404 Not Found
+Oops, something went wrong.
