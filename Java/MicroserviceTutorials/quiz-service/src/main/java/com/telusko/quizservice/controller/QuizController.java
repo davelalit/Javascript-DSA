@@ -5,6 +5,7 @@ import com.telusko.quizservice.model.QuizDto;
 import com.telusko.quizservice.model.Response;
 import com.telusko.quizservice.service.QuizService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,4 +34,9 @@ public class QuizController {
     }
 
 
+     @GetMapping("/hello")
+    public ResponseEntity<String> hello() {
+        String message = "Hello World!";
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
 }
