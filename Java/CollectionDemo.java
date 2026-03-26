@@ -32,7 +32,7 @@ class NameComparator implements Comparator<Person> {
 
 public class CollectionDemo {
     public static void main(String[] args) {
-        // ✅ ArrayList Example
+        // ✅ ArrayList Exampleh
         List<Person> people = new ArrayList<>();
         people.add(new Person("Alice", 30));
         people.add(new Person("Bob", 25));

@@ -23,9 +23,9 @@ class SharedData {
     volatile boolean flag = false;
 }
 
-class MyThread extends Thread {
+class MyThread2 extends Thread {
     SharedData data;
-    MyThread(SharedData data) {
+    MyThread2(SharedData data) {
         this.data = data;
     }
 
@@ -54,9 +54,9 @@ public class RaceConditionDemo {
         System.out.println("AtomicCounter Final count: " + ac.count.get());
 
         /*
-        - MyThread keeps checking flag.
-        - When main() sets flag = true, the change is immediately visible to MyThread because flag is volatile.
-        - Without volatile, MyThread might never see the change due to caching.
+        - MyThread2 keeps checking flag.
+        - When main() sets flag = true, the change is immediately visible to MyThread2 because flag is volatile.
+        - Without volatile, MyThread2 might never see the change due to caching.
 
         Volatile keyword can be used with boolean flag/state and shared object reference 
         to ensure that changes made by one thread are immediately visible to other threads. 
@@ -65,7 +65,7 @@ public class RaceConditionDemo {
         
          */
         SharedData data = new SharedData();
-        MyThread t = new MyThread(data);
+        MyThread2 t = new MyThread2(data);
         t.start();
 
         Thread.sleep(1000); // Simulate delay

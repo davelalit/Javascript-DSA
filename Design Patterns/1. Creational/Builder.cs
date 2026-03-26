@@ -121,6 +121,12 @@ public class Director
         }
     }
 
+    public voic construct(StudentBuilder studentBuilder)
+    {
+        this.studentBuilder = studentBuilder;
+        return createStudent();
+    }
+
     private Student createEngineeringStudent()
     {
         return studentBuilder.setRollNumber(2)
