@@ -1,3 +1,4 @@
+// Blind 75 Java Solution - https://github.com/mdabarik/blind-75-leetcode-questions/blob/main/01--two-sum.java
 // Blind 75 Questions https://takeuforward.org/interviews/blind-75-leetcode-problems-detailed-video-solutions
 // 1. 	2Sum Problem
 function twoSum(nums, target) {
