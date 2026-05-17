@@ -103,6 +103,11 @@ public class Director
 {
     StudentBuilder studentBuilder;
 
+    public voic construct(StudentBuilder studentBuilder)
+    {
+        this.studentBuilder = studentBuilder;
+        return createStudent();
+    }
 
     public Student createStudent()
     {
@@ -119,12 +124,6 @@ public class Director
         {
             throw new Exception("Invalid Student Builder");
         }
-    }
-
-    public voic construct(StudentBuilder studentBuilder)
-    {
-        this.studentBuilder = studentBuilder;
-        return createStudent();
     }
 
     private Student createEngineeringStudent()

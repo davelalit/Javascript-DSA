@@ -65,7 +65,7 @@ public class Client
     public static void Main(string[] args)
     {
         VendingMachine vendingMachine = new VendingMachine();
-        vendingMachine.SetState(new IdleStage(vendingMachine));
+        vendingMachine.SetState(new IdleStage());
 
         vendingMachine.getMachineState().insertCoin(); // Output: Coin inserted. Transitioning to WorkingState.
         vendingMachine.getMachineState().dispenseItem(); // Output: Collect your item. Transitioning to IdleState.

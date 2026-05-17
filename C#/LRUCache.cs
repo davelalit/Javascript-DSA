@@ -65,6 +65,20 @@ Console.WriteLine(tradeCache.Get("AAPL"));
 
 // Insert new item → evicts least recently used (MSFT if not accessed)
 tradeCache.Put("TSLA", "Tesla metadata");
+var result = CountVC("Lalit Dwivedi");
+Console.WriteLine(String.Format("Vowels={0}, Consonants={1}", result.vowels, result.consonants));
     }
+
+    public static (int vowels, int consonants) CountVC(string s)
+{
+    int v = 0, c = 0;
+    foreach (char ch in s.ToLower())
+    {
+        if ("aeiou".Contains(ch)) v++;
+        else if (char.IsLetter(ch)) c++;
+    }
+    return (v, c);
+}
+
 }
 

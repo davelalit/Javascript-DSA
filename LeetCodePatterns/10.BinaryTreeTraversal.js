@@ -13,6 +13,14 @@
  * 124. Binary Tree Maximum Path Sum
  */
 
+/**
+Traversal Strategy Visit Order Main Data Structure
+Pre-order DFS      Root -> Left -> Right Stack / Recursion [6, 31]
+In-order  DFS      Left -> Root -> Right Stack / Recursion [6, 33]
+Post-order DFS     Left ->  Right ->  Root Stack / Recursion [6, 20]
+Level-order BFS    Level by Level (Top to Bottom)  Queue [1, 17]
+ */
+
 /* 94. Binary Tree Inorder Traversal
     * Given a binary tree, return the inorder traversal of its nodes' values.
     * Example: Input: root = [1,null,2,3], Output: [1,3,2]

@@ -1,4 +1,4 @@
-// Adapter Pattern C#
+// Adapter Pattern C# (ABCDFFP)
 // This pattern acts as a bridge between two incompatible interfaces. It allows classes to work together that couldn't otherwise because of incompatible interfaces.
 // The Adapter pattern is a structural design pattern that allows you to convert the interface of a class
 // into another interface that clients expect. This pattern is useful when you want to use an existing class but its interface does not match the one you need, and it promotes flexibility by allowing you to work with classes that would otherwise be incompatible.

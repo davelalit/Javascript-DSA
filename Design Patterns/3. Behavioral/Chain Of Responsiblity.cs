@@ -1,4 +1,4 @@
-//  Behavioral Design Pattern
+//  Behavioral Design Pattern (CCIIMMOSSTV)
 // Guides how different objects communicate with each other efficiently and distribute tasks efficiently, 
 // making software system flexible and easy to maintain. 
 // It focuses on the interaction between objects and how they collaborate to achieve a common goal, rather than on the structure of the objects themselves.
